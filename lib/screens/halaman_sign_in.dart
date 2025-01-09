@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'halaman_beranda.dart'; // Pastikan untuk mengimpor halaman beranda
 
 class HalamanSignIn extends StatelessWidget {
   const HalamanSignIn({super.key});
@@ -41,11 +42,17 @@ class HalamanSignIn extends StatelessWidget {
             const SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
+                // Navigasi ke Halaman Beranda
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => const HomeScreen()),
+                );
               },
               child: const Text('Sign In'),
             ),
             TextButton(
               onPressed: () {
+                // Tambahkan logika untuk reset password jika diperlukan
               },
               child: const Text('Forgot Password?'),
             ),
